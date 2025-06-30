@@ -2,7 +2,7 @@
 import React from 'react';
 import { GoDotFill } from "react-icons/go";
 import image from '../../public/Frame.png'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const pointsData = [
   "Website UI/UX Design",
@@ -15,60 +15,42 @@ const pointsData = [
 
 
 const UIUX = () => (
-  <div className='bg-blue-950 pt-30 px-10'>
-    <div className='flex justify-around '>
-      <div className='pt-25 '>
-        <div>
-          <h1 className='text-white text-[46px] font-bold'>Graphic & UI/UX Design</h1>
-        </div>
-        <div className='space-y-1'>
-          {
-            pointsData.map(title => (
-              <p className='text-[#A0AEC0] text-[18px] flex gap-5'><span><GoDotFill/></span><span>{title}</span></p>
-            ))
-          }
-        </div>
-
-      </div>
-      <div className='w-[644px] h-[607px] relative  '>
-        <div className='absolute bg-[#D9D9D9] opacity-10 w-[568px] h-[568px] rounded-full'></div>
-         <motion.div
-          className="absolute left-20 -top-10 w-[568px] h-[568px] border border-gray-700 rounded-full overflow-hidden"
+  <div className='bg-blue-950 py-25 md:py-35 px-10 flex flex-col md:flex-row justify-around'>
+    <div className='relative w-full max-w-lg h-auto my-10 md:my-0 right-10 order-1 md:order-2'>
+      <div className='absolute -top-10 left-8 w-full aspect-square opacity-10 bg-white rounded-full z-0'></div>
+      <div className='absolute left-25  md:left-35 -top-15 w-[90%] aspect-square overflow-hidden'>
+        <motion.div
+          className="relative w-full h-full border border-gray-600 rounded-full"
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
         >
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
             <motion.div
               className="bg-red-700 rounded-full"
-              animate={{
-                width: ["10px", "17px", "10px"],
-                height: ["10px", "17px", "10px"]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
+              animate={{ width: ["10px", "17px", "10px"], height: ["10px", "17px", "10px"] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
-
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
             <motion.div
               className="bg-red-700 rounded-full"
-              animate={{
-                width: ["10px", "17px", "10px"],
-                height: ["10px", "17px", "10px"]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.75
-              }}
+              animate={{ width: ["10px", "17px", "10px"], height: ["10px", "17px", "10px"] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.75 }}
             />
           </div>
         </motion.div>
-        <img src={image} alt="Image" className='absolute w-[480px] h-[472px] left-20 top-10'/>
+      </div>
+
+      <img src={image} alt="Website" className='relative left-20 z-10 w-[80%] h-auto object-contain' />
+    </div>
+    <div className='space-y-5 max-w-xl order-2 md:order-1 mt-12 md:mt-0'>
+      <h1 className='text-white font-bold text-[1.9rem] md:text-[2.875rem]'>Graphic & UI/UX Design</h1>
+      <div className='text-[#A0AEC0] space-y-1'>
+        {
+          pointsData.map((title, idx) => (
+            <p key={idx} className='flex items-start gap-3'><GoDotFill className='mt-1 text-sm' /><span className='text-[1rem] md:text-[1.125rem]'>{title}</span></p>
+          ))
+        }
       </div>
     </div>
   </div>
