@@ -1,19 +1,146 @@
 // src/components/common/Navbar.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../public/Logo.png';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
 
-const Navbar = () => (
-  <nav>
-    <h2>Company Logo</h2>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/web-design">Web Design</Link></li>
-      <li><Link to="/ui-ux">UI/UX</Link></li>
-      <li><Link to="/digital-marketing">Digital Marketing</Link></li>
-      <li><Link to="/about-us">About Us</Link></li>
-      <li><Link to="/contact-us">Contact Us</Link></li>
-    </ul>
-  </nav>
-);
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [showDigitalMarketingDropdown, setShowDigitalMarketingDropdown] = useState(false);
+  const [showUIDropdown, setShowUIDropdown] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  const navLinks = (
+    <>
+      <li
+        className="relative group cursor-pointer"
+        onMouseEnter={() => setShowDropdown(true)}
+        onMouseLeave={() => setShowDropdown(false)}
+      >
+        <span className="hover:text-red-800 py-2 block">Web-Design</span>
+        <AnimatePresence>
+          {showDropdown && (
+            <motion.ul
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="absolute left-0 top-full w-64 bg-gray-900 text-white border-t border-r border-gray-400 space-y-2 z-50 shadow-lg"
+            >
+              <li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">Website Development <FaAngleRight /></li>
+              <li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">App Development <FaAngleRight /></li>
+              <li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">WordPress Solutions <FaAngleRight /></li>
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </li>
+
+      <li
+        className="relative group cursor-pointer"
+        onMouseEnter={() => setShowUIDropdown(true)}
+        onMouseLeave={() => setShowUIDropdown(false)}
+      >
+        <span className="hover:text-red-800 py-2 block">UI/UX</span>
+        <AnimatePresence>
+          {showUIDropdown && (
+            <motion.ul
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="absolute left-0 top-full w-72 bg-blue-950 text-white z-50 shadow-lg"
+            >
+              {[
+                "Website UI/UX Design",
+                "Mobile App UI/UX Design",
+                "Logo Design",
+                "Business Card / Visiting Card Design",
+                "Brochure / Flyer / Banner Design",
+                "Social Media Post Design"
+              ].map((item, idx) => (
+                <li key={idx} className="py-3 px-4 border-b border-gray-400 hover:bg-gray-800">{item}</li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </li>
+
+      <li className="hover:text-red-800 py-2"><Link to="/mploy">Employ</Link></li>
+
+      <li
+        className="relative group cursor-pointer"
+        onMouseEnter={() => setShowDigitalMarketingDropdown(true)}
+        onMouseLeave={() => setShowDigitalMarketingDropdown(false)}
+      >
+        <span className="hover:text-red-800 py-2 block">Digital Marketing</span>
+        <AnimatePresence>
+          {showDigitalMarketingDropdown && (
+            <motion.ul
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="absolute left-0 top-full w-80 bg-blue-950 text-white z-50 shadow-lg"
+            >
+              {[
+                "Meta (Facebook & Instagram) Ads",
+                "Google Ads (Search, Display, Shopping)",
+                "Social Media Marketing (SMM)",
+                "Search Engine Optimization (SEO)",
+                "Google My Business Optimization",
+                "Content Writing & Blog Posting",
+                "Email Marketing Campaigns"
+              ].map((item, idx) => (
+                <li key={idx} className="py-3 px-4 border-b border-gray-400 hover:bg-gray-800">{item}</li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </li>
+
+      <li className="hover:text-red-800 py-2"><Link to="/about-us">About Us</Link></li>
+      <li><Link to="/contact-us" className="bg-[#880E4F] px-5 py-2 rounded-lg block">Contact Us</Link></li>
+    </>
+  );
+
+  return (
+    <nav className="bg-[#000E26] text-white px-6 py-3 flex justify-between items-center relative z-50">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img src={logo} alt="Logo" className="w-[130px] h-[70px]" />
+      </div>
+
+      {/* Desktop Nav */}
+      <ul className="hidden lg:flex gap-6 font-semibold items-center">
+        {navLinks}
+      </ul>
+
+      {/* Mobile Toggle */}
+      <div className="lg:hidden z-50">
+        <button onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.ul
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed top-0 right-0 w-3/4 h-full bg-[#000E26] z-40 p-6 space-y-6 overflow-y-auto font-semibold text-white shadow-lg"
+          >
+            {navLinks}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
 
 export default Navbar;
