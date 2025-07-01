@@ -14,7 +14,7 @@ export default function OnlinePresence() {
     <section className="relative text-white py-16 sm:py-20 overflow-hidden">
       <BouncyText
         text={`1st Step of your Online Presence`}
-        className="text-2xl sm:text-4xl md:text-5xl px-4 font-extrabold leading-tight text-center mb-10 sm:mb-12"
+        className="text-2xl sm:text-4xl md:text-5xl px-4 mt-3 font-extrabold leading-tight text-center  "
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-10 sm:gap-12">
@@ -29,27 +29,27 @@ export default function OnlinePresence() {
           <img
             src={men}
             alt="man"
-            className="absolute top-[-8%] left-1/2 transform -translate-x-1/2 w-[70%] sm:w-[75%] md:w-[80%] h-auto z-10"
+            className="absolute top-[16%] md:top-[-8%] left-1/2 transform -translate-x-1/2 w-[58%]  md:w-[80%] h-auto z-10"
           />
           <img
             src={lineGraph}
             alt="lineGraph"
-            className="absolute left-[-20%] top-[32%] w-[30%] sm:w-[28%] h-auto rotate-[3deg] animate-[float-left-up_6s_ease-in-out_infinite]"
+            className="absolute left-3.5 md:left-[-20%] top-[185px] md:top-[32%] w-[14%] sm:w-[28%] h-auto rotate-[3deg] animate-[float-left-up_6s_ease-in-out_infinite]"
           />
           <img
             src={brush}
             alt="brush"
-            className="absolute left-[-10%] top-[70%] w-[18%] sm:w-[20%] md:w-[22%] h-auto rotate-[3deg] animate-[float-left-up_5s_ease-in-out_infinite]"
+            className="absolute  left-[7px] md:left-[-10%] top-[70%] w-[10%] sm:w-[20%] md:w-[22%] h-auto rotate-[3deg] animate-[float-left-up_5s_ease-in-out_infinite]"
           />
           <img
             src={black}
             alt="black"
-            className="absolute bottom-[-10%] left-1/2 transform -translate-x-1/2 w-[90%] h-auto rotate-6"
+            className="absolute bottom-[-10%] left-1/2 transform -translate-x-1/2 w-[70%] lg:w-[90%] h-auto rotate-6"
           />
           <img
             src={bar}
             alt="bar"
-            className="absolute top-[50%] left-[78%] w-[28%] sm:w-[30%] md:w-[33%] h-auto rotate-2 animate-[float-right-down_6s_ease-in-out_infinite]"
+            className="absolute top-[80%] md:top-[50%] left-[78%] w-[16%] sm:w-[30%] md:w-[33%] h-auto rotate-2 animate-[float-right-down_6s_ease-in-out_infinite]"
           />
         </div>
 
@@ -61,7 +61,7 @@ export default function OnlinePresence() {
           viewport={{ once: true }}
           className="max-w-[668px] w-full relative px-2"
         >
-          <p className="text-[#D4D4D4] text-sm sm:text-base md:text-lg font-semibold leading-relaxed mb-6">
+          <p className="text-[#D4D4D4] text-base md:text-lg font-semibold leading-relaxed mt-4 mb-6">
             In the era of virtualization, it is important for any organization,
             regardless of its size or industry, to have a strong online presence
             to get discovered. Resultantly, a business website becomes crucial
