@@ -30,9 +30,9 @@ const Navbar = () => {
               transition={{ duration: 0.2 }}
               className="absolute left-0 top-full w-64 bg-gray-900 text-white border-t border-r border-gray-400 space-y-2 z-50 shadow-lg"
             >
-              <li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">Website Development <FaAngleRight /></li>
-              <li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">App Development <FaAngleRight /></li>
-              <li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">WordPress Solutions <FaAngleRight /></li>
+              <Link to={'/web-design'}><li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">Website Development <FaAngleRight /></li></Link>
+              <Link to={'/web-design'}><li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">App Development <FaAngleRight /></li></Link>
+              <Link to={'/web-design'}><li className="py-3 px-4 hover:bg-gray-800 flex justify-between items-center">WordPress Solutions <FaAngleRight /></li></Link>
             </motion.ul>
           )}
         </AnimatePresence>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 "Brochure / Flyer / Banner Design",
                 "Social Media Post Design"
               ].map((item, idx) => (
-                <li key={idx} className="py-3 px-4 border-b border-gray-400 hover:bg-gray-800">{item}</li>
+                <Link to={'/ui-ux'}><li key={idx} className="py-3 px-4 border-b border-gray-400 hover:bg-gray-800">{item}</li></Link>
               ))}
             </motion.ul>
           )}
@@ -94,7 +94,7 @@ const Navbar = () => {
                 "Content Writing & Blog Posting",
                 "Email Marketing Campaigns"
               ].map((item, idx) => (
-                <li key={idx} className="py-3 px-4 border-b border-gray-400 hover:bg-gray-800">{item}</li>
+                <Link to = {'/digital-marketing'}><li key={idx} className="py-3 px-4 border-b border-gray-400 hover:bg-gray-800">{item}</li></Link>
               ))}
             </motion.ul>
           )}
@@ -107,7 +107,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-[#000E26] text-white px-6 py-3 flex justify-between items-center relative z-50">
+    <nav className="bg-[#000E26] text-white px-6 py-3 mx-auto flex justify-between items-center relative z-50">
       {/* Logo */}
       <div className="flex items-center">
         <img src={logo} alt="Logo" className="w-[130px] h-[70px]" />
