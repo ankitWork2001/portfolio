@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li
+      <Link to={'/web-design'}><li
         className="relative group cursor-pointer"
         onMouseEnter={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
@@ -36,9 +36,10 @@ const Navbar = () => {
             </motion.ul>
           )}
         </AnimatePresence>
-      </li>
+        </li>
+      </Link>
 
-      <li
+      <Link to={'/ui-ux'}><li
         className="relative group cursor-pointer"
         onMouseEnter={() => setShowUIDropdown(true)}
         onMouseLeave={() => setShowUIDropdown(false)}
@@ -66,11 +67,11 @@ const Navbar = () => {
             </motion.ul>
           )}
         </AnimatePresence>
-      </li>
+      </li></Link>
 
       <li className="hover:text-red-800 py-2"><Link to="/mploy">Employ</Link></li>
 
-      <li
+      <Link to = {'/digital-marketing'}><li
         className="relative group cursor-pointer"
         onMouseEnter={() => setShowDigitalMarketingDropdown(true)}
         onMouseLeave={() => setShowDigitalMarketingDropdown(false)}
@@ -99,7 +100,7 @@ const Navbar = () => {
             </motion.ul>
           )}
         </AnimatePresence>
-      </li>
+      </li></Link>
 
       <li className="hover:text-red-800 py-2"><Link to="/about-us">About Us</Link></li>
       <li><Link to="/contact-us" className="bg-[#880E4F] px-5 py-2 rounded-lg block">Contact Us</Link></li>

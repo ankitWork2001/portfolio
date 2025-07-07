@@ -1,8 +1,9 @@
 // src/pages/UIUX.jsx
 import React from 'react';
 import { GoDotFill } from "react-icons/go";
-import image from '../../public/Frame.png'
+import image from '../../public/UI_UX_Design.png'
 import { motion } from 'framer-motion'
+import BouncyText from '../components/homepage/BouncyText';
 
 const pointsData = [
   "Website UI/UX Design",
@@ -15,8 +16,8 @@ const pointsData = [
 
 
 const UIUX = () => (
-  <div className='bg-blue-950 py-25 md:py-35 px-10 flex flex-col md:flex-row justify-around'>
-    <div className='relative w-full max-w-lg h-auto my-10 md:my-0 right-10 order-1 md:order-2'>
+  <div className='bg-blue-950 py-18 md:py-35 px-10 flex flex-col md:flex-row justify-around '>
+    <div className='relative w-full max-w-lg h-auto my-8 md:my-0 right-13 order-1 md:order-2'>
       <div className='absolute -top-10 left-8 w-full aspect-square opacity-10 bg-white rounded-full z-0'></div>
       <div className='absolute left-25  md:left-35 -top-15 w-[90%] aspect-square overflow-hidden'>
         <motion.div
@@ -41,10 +42,13 @@ const UIUX = () => (
         </motion.div>
       </div>
 
-      <img src={image} alt="Website" className='relative left-20 z-10 w-[80%] h-auto object-contain' />
+      <img src={image} alt="Website" className='relative left-20 z-10 w-[85%]  h-auto object-contain' />
     </div>
     <div className='space-y-5 max-w-xl order-2 md:order-1 mt-12 md:mt-0'>
-      <h1 className='text-white font-bold text-[1.9rem] md:text-[2.875rem]'>Graphic & UI/UX Design</h1>
+      <BouncyText
+            text={"Graphic & UI/UX Design"}
+            className="text-white font-bold text-[2rem] md:text-[2.875rem]"
+          />
       <div className='text-[#A0AEC0] space-y-1'>
         {
           pointsData.map((title, idx) => (

@@ -5,6 +5,7 @@ import image2 from '../../public/Frame2.png';
 import image3 from '../../public/Frame3.png';
 import { GoDotFill } from "react-icons/go";
 import { motion } from 'framer-motion';
+import BouncyText from '../components/homepage/BouncyText';
 
 const pointsForSection1 = [
   "Business Website Design (Static/Dynamic)",
@@ -73,7 +74,10 @@ const WebDesign = () => (
         <img src={image1} alt="Website" className='relative z-10 w-full h-auto object-contain' />
       </div>
       <div className='space-y-5 max-w-xl order-1 md:order-2 mt-12 md:mt-0'>
-        <h1 className='text-white font-bold text-[2rem] md:text-[2.875rem]'>Website Development</h1>
+        <BouncyText
+            text={"Website Development"}
+            className="text-white font-bold text-[2rem] md:text-[2.875rem]"
+          />
         <div className='text-[#A0AEC0] space-y-1'>
           {
             pointsForSection1.map((title, idx) => (
@@ -89,7 +93,10 @@ const WebDesign = () => (
     <section className='flex flex-col md:flex-row justify-around items-center py-10'>
 
       <div className='space-y-5 max-w-xl order-2 md:order-1 mt-10 md:mt-0'>
-        <h1 className='text-white font-bold text-[2rem] md:text-[2.875rem]'>App Development</h1>
+        <BouncyText
+            text={"App Development"}
+            className="text-white font-bold text-[2rem] md:text-[2.875rem]"
+          />
         <div className='text-[#A0AEC0] space-y-1'>
           {
             pointsForSection2.map((title, idx) => (
@@ -159,7 +166,10 @@ const WebDesign = () => (
         <img src={image3} alt="Website" className='relative left-12 z-10 w-[80%] h-auto object-contain' />
       </div>
       <div className='space-y-5 max-w-xl order-1 md:order-1 mt-5 md:mt-0'>
-        <h1 className='text-white font-bold text-[2rem] md:text-[2.875rem]'>WordPress Solutions</h1>
+        <BouncyText
+            text={"WordPress Solutions"}
+            className="text-white font-bold text-[2rem] md:text-[2.875rem]"
+          />
         <div className='text-[#A0AEC0] space-y-1'>
           {
             pointsForSection3.map((title, idx) => (
