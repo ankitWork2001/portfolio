@@ -57,7 +57,7 @@ export default function AboutUs() {
             <h3 className="text-3xl md:text-4xl text-[#E6007A] font-semibold">
               A Virtual Workplace for Professionals
             </h3>
-            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed sm:leading-loose font-medium max-w-[738px] w-full mx-auto md:mx-0 px-4 sm:px-0">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed sm:leading-loose font-medium max-w-[738px] w-full mx-auto md:mx-0 px-4 sm:px-0 text-start">
               Welcome to VaishaliTech, where innovation meets creativity. Founded by Abhishek Kumar, a BTech graduate from IIIT Lucknow, our mission is to empower businesses through cutting-edge digital solutions. At VaishaliTech, we specialize in website design, SEO, social media management, and app design, tailored to meet the unique needs of each client. Our team is dedicated to delivering high-quality services that enhance your online presence and drive growth. We believe in building lasting relationships with our clients and providing exceptional support every step of the way. Let us help you navigate the digital landscape and achieve your business goals.
             </p>
           </motion.div>

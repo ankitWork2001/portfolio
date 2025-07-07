@@ -43,18 +43,18 @@ const services = [
 
 export default function OurServices() {
   return (
-    <div className="py-20  text-white">
+    <div className="text-white mx-auto">
       <BouncyText
         text={`Our Services`}
-        className="text-5xl pl-12 font-bold leading-tight text-center mb-12 text-white"
+        className="text-5xl  font-bold leading-tight text-center mb-12 text-white"
       />
-      <div className="max-w-[1280px] mx-auto space-y-12 px-4">
+      <div className="max-w-[1380px] mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {services.slice(0, 3).map((svc, index) => (
             <ServiceCard key={svc.title} circle={circle} index={index} {...svc} />
           ))}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2  gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  gap-8">
           {services.slice(3).map((svc, index) => (
             <ServiceCard key={svc.title} circle={circle} index={index + 3} {...svc} />
           ))}

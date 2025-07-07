@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import agent from "./img/agent.png";
 import BouncyText from "../BouncyText";
 
+
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -55,7 +56,7 @@ export default function ContactUs() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#031430] text-white mx-auto py-16 px-6 md:px-16 md:mt-20"
+      className="bg-[#031430] text-white mx-auto py-16 px-12 md:px-16 md:mt-20"
     >
       <div className="max-w-[1454px] mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
         {/* Left: Image + Hover */}
@@ -64,12 +65,12 @@ export default function ContactUs() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="relative w-full max-w-md group mx-auto md:mx-0"
+          className="relative w-full max-w-xs md:max-w-md group mx-auto md:mx-0"
         >
           <img
             src={agent}
             alt="Support Agent"
-            className="w-full max-w-[320px] h-auto mx-auto rounded shadow-lg object-cover mt-16 transition-transform duration-300 ease-in-out group-hover:scale-105"
+            className="w-full h-auto mx-auto rounded shadow-lg object-cover mt-16 transition-transform duration-300 ease-in-out group-hover:scale-105"
           />
           <div className="absolute inset-0 flex items-center justify-center p-4 z-20">
             <div className="relative top-[200px] flex items-start gap-3 transform -translate-x-10 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-out">
@@ -87,7 +88,7 @@ export default function ContactUs() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
-          className="w-full md:w-1/2 space-y-6"
+          className="w-full md:w-2/3 space-y-6"
         >
           <BouncyText
             text="Contact Us"
@@ -99,7 +100,7 @@ export default function ContactUs() {
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Grid Inputs */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Name */}
               <div className="relative">
                 <input
