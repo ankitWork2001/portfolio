@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import cardBg from "./images/cardBg.png";
-import brush from "./images/brush.png";
+import brush from "./images/Brush.png";
 
 export default function ServiceCard({
   icon,

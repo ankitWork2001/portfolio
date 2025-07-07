@@ -1,8 +1,8 @@
 // src/pages/WebDesign.jsx
 import React from 'react';
-import image1 from '../../public/Frame.png';
-import image2 from '../../public/Frame2.png';
-import image3 from '../../public/Frame3.png';
+import image1 from '../public/Frame.png';
+import image2 from '../public/Frame2.png';
+import image3 from '../public/Frame3.png';
 import { GoDotFill } from "react-icons/go";
 import { motion } from 'framer-motion';
 import BouncyText from '../components/homepage/BouncyText';

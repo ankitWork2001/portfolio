@@ -1,6 +1,6 @@
 // src/components/common/Footer.jsx
 import React from 'react';
-import logo from '../../../public/Logo.png'
+import logo from '../../public/Logo.png'
 import { FaThreads } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";

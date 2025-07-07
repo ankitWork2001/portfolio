@@ -1,7 +1,7 @@
 // src/pages/DigitalMarketing.jsx
 import React from 'react';
 import { GoDotFill } from "react-icons/go";
-import image from '../../public/Digital_Marketing.png'
+import image from '../public/Digital_Marketing.png';
 import { motion } from 'framer-motion'
 import BouncyText from '../components/homepage/BouncyText';
 

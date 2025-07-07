@@ -1,7 +1,7 @@
 // src/pages/UIUX.jsx
 import React from 'react';
 import { GoDotFill } from "react-icons/go";
-import image from '../../public/UI_UX_Design.png'
+import image from '../public/UI_UX_Design.png'
 import { motion } from 'framer-motion'
 import BouncyText from '../components/homepage/BouncyText';
 

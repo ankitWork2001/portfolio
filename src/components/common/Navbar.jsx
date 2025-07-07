@@ -1,7 +1,7 @@
 // src/components/common/Navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../public/Logo.png';
+import logo from '../../public/Logo.png'
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
 
@@ -69,7 +69,7 @@ const Navbar = () => {
         </AnimatePresence>
       </li></Link>
 
-      <li className="hover:text-red-800 py-2"><Link to="/mploy">Employ</Link></li>
+      {/* <li className="hover:text-red-800 py-2"><Link to="/mploy">Employ</Link></li> */}
 
       <Link to = {'/digital-marketing'}><li
         className="relative group cursor-pointer"
@@ -102,7 +102,7 @@ const Navbar = () => {
         </AnimatePresence>
       </li></Link>
 
-      <li className="hover:text-red-800 py-2"><Link to="/about-us">About Us</Link></li>
+      {/* <li className="hover:text-red-800 py-2"><Link to="/about-us">About Us</Link></li> */}
       <li><Link to="/contact-us" className="bg-[#880E4F] px-5 py-2 rounded-lg block">Contact Us</Link></li>
     </>
   );
@@ -111,7 +111,9 @@ const Navbar = () => {
     <nav className="bg-[#000E26] text-white px-6 py-3 mx-auto flex justify-between items-center relative z-50">
       {/* Logo */}
       <div className="flex items-center">
+        <Link to="/">
         <img src={logo} alt="Logo" className="w-[130px] h-[70px]" />
+        </Link>
       </div>
 
       {/* Desktop Nav */}
