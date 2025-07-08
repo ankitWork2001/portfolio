@@ -5,12 +5,14 @@ import OnlinePresence from "../components/homepage/onlinePresence/OnlinePresence
 import DigitalMarketing from "../components/homepage/digital-Marketing/Marketing.jsx";
 import AboutShort from "../components/homepage/about/AboutShort.jsx";
 import ContactUs from "../components/homepage/contact-us/ContactShort.jsx";
+import StatsCounter from "../components/StatsCounter.jsx";
 const Home = () => (
   <div>
     <HeroSection />
     <OurServices />
     <OnlinePresence /> 
      <DigitalMarketing />
+     <StatsCounter/>
      <AboutShort />
     <ContactUs /> 
 

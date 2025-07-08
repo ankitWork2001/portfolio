@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaUser,
   FaEnvelope,
@@ -50,6 +50,9 @@ export default function ContactUs() {
     setTimeout(() => setStatus(""), 5000);
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0}); // 👈 scrolls to top automatically
+  }, []);
   return (
     <motion.section
       initial={{ opacity: 0, y: 100 }}
