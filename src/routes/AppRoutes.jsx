@@ -9,6 +9,7 @@ import UIUX from '../pages/UIUX';
 import DigitalMarketing from '../pages/DigitalMarketing';
 import AboutUs from '../pages/AboutUs';
 import ContactUs from '../pages/ContactUs';
+import Portfolio from '../pages/Portfolio';
 
 const AppRoutes = () => {
   return (
@@ -20,7 +21,10 @@ const AppRoutes = () => {
         <Route path="/ui-ux" element={<UIUX />} />
         <Route path="/digital-marketing" element={<DigitalMarketing />} />
         <Route path="/about-us" element={<AboutUs />} />
+         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/contact-us" element={<ContactUs />} />
+       
+
       </Routes>
       <Footer />
     </>
