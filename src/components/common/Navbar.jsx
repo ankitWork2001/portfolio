@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../public/Logo.png'
+import vtlogo from '../../assets/vtlogo.png';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
 
@@ -103,19 +104,39 @@ const Navbar = () => {
       </li></Link>
 
       {/* <li className="hover:text-red-800 py-2"><Link to="/about-us">About Us</Link></li> */}
-      <li><Link to="/contact-us" className="bg-[#880E4F] px-5 py-2 rounded-lg block">Contact Us</Link></li>
+      {/* <li><Link to="/contact-us"  className="bg-[#000E26] text-white px-5 py-2 rounded-lg block">Contact Us</Link></li> */}
+      <li className="lg:hidden">
+  <Link
+    to="/contact-us"
+    className="w-full block text-center bg-white text-[#000E26] font-semibold py-3 rounded-md hover:bg-gray-200 transition duration-300"
+  >
+    Contact Us
+  </Link>
+</li>
+
+<li className="hidden lg:block">
+  <Link
+    to="/contact-us"
+    className="bg-[#000E26] text-white px-5 py-2 rounded-lg block hover:bg-[#111e33] transition"
+  >
+    Contact Us
+  </Link>
+</li>
+
     </>
   );
 
   return (
-    <nav className="bg-[#000E26] text-white px-6 py-3 mx-auto flex justify-between items-center relative z-50">
+    // <nav className="bg-[#fff8d3] text-black px-6 py-3 mx-auto flex justify-between items-center relative z-50">
+    <nav className="fixed top-0 left-0 w-full  bg-[#fff8d3] text-black px-6 py-3 flex justify-between items-center z-50 shadow-md">
+
       {/* Logo */}
       <div className="flex items-center">
         <Link to="/">
-        <img src={logo} alt="Logo" className="w-[130px] h-[70px]" />
+        <img src={vtlogo} alt="Logo" className="w-[130px] h-auto" />
         </Link>
       </div>
-
+{/* bg-[#000E26] */}
       {/* Desktop Nav */}
       <ul className="hidden lg:flex gap-6 font-semibold items-center">
         {navLinks}

@@ -10,7 +10,7 @@ import circle from "../services/images/circle.png";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full min-h-[600px] overflow-hidden px-4 sm:px-6 py-12 sm:py-16 text-white flex items-center lg:p-11 justify-center ">
+<div className="relative w-full min-h-[600px] overflow-hidden px-4 sm:px-6 pt-[120px] pb-12 sm:pt-[120px] sm:pb-16 lg:pt-[140px] lg:pb-20 text-white flex items-center justify-center">
       <div className="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
         {/* LEFT SIDE - TEXT */}
         <div className="xl:[700px] 2xl:w-[688px] w-full mt-5 md:mt-18 lg:mt-0 sm:mt-2 lg:w-1/2 space-y-6 text-center lg:text-left z-10">
