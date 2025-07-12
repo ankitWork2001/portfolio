@@ -1,11 +1,13 @@
 import React from "react";
-import image1 from '../assets/portfolio_imgs/1.png'
-import image2 from '../assets/portfolio_imgs/2.png'
-import image3 from '../assets/portfolio_imgs/3.png'
-import image4 from '../assets/portfolio_imgs/4.png'
-import image5 from '../assets/portfolio_imgs/5.png'
-import image6 from '../assets/portfolio_imgs/6.png'
-import image7 from '../assets/portfolio_imgs/7.png'
+import {Link} from 'react-router-dom'
+import image1 from '../assets/portfolio_imgs/1.jpg'
+import image2 from '../assets/portfolio_imgs/2.jpg'
+import image3 from '../assets/portfolio_imgs/3.jpg'
+import image4 from '../assets/portfolio_imgs/4.jpg'
+import image5 from '../assets/portfolio_imgs/5.jpg'
+import image6 from '../assets/portfolio_imgs/6.jpg'
+import image7 from '../assets/portfolio_imgs/7.jpg'
+import image8 from '../assets/portfolio_imgs/8.jpg'
 
 const projects = [
   {
@@ -46,7 +48,7 @@ const projects = [
   {
     title: "Taruni",
     category: "SEO & Website",
-    image: image4,
+    image: image8,
   },
   {
     title: "RU Music",
@@ -63,7 +65,7 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-[#111b35] flex flex-col gap-3 rounded-xl overflow-hidden shadow-md border border-gray-700 text-white"
+            className="bg-[#111b35] hover:-scale-[1.1] transition duration-400 flex flex-col gap-3 rounded-xl overflow-hidden shadow-md border border-gray-700 text-white"
           >
             {project.image ? (
               <img
@@ -98,9 +100,9 @@ const Portfolio = () => {
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white max-w-xl leading-snug">
           WANT TO GROW YOUR BUSINESS?
         </h2>
-        <button className="mt-6 bg-[#c92874] hover:bg-[#b01d64] px-6 py-3 rounded-full text-white font-medium text-sm sm:text-base transition-all">
+        <Link to="/contact-us" className="mt-6 bg-[#c92874] hover:bg-[#b01d64] px-6 py-3 rounded-full text-white font-medium text-sm sm:text-base transition-all">
           Contact us now
-        </button>
+        </Link>
       </div>
     </div>
   );
