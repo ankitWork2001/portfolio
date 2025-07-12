@@ -1,12 +1,16 @@
 // src/pages/AboutUs.jsx
 import React from 'react';
+import bg1 from '../assets/about_imgs/bg1.jpg'
+import bg2 from '../assets/about_imgs/bg2.jpg'
+import linkedin from '../assets/about_imgs/linkedin.png'
+import profile from '../assets/about_imgs/profile.png'
 
 const AboutUs = () => {
    return (
     <>
       <section className='bg-[#001434]'>
 
-        <section className='w-full lg:h-[25rem] md:h-[10rem] h-[4.4rem] flex justify-center items-center bg-center bg-cover' style={{ backgroundImage: "url(./img/bg1.jpg)" }}>
+        <section className='w-full lg:h-[25rem] md:h-[10rem] h-[6rem] flex justify-center items-center bg-center bg-cover mt-13 md:mt-10 lg:mt-0' style={{ backgroundImage: `url(${bg1})` }}>
           <span className='md:text-6xl text-2xl font-semibold text-center text-white'>About us</span>
         </section>
 
@@ -37,13 +41,12 @@ const AboutUs = () => {
 
         </section>
 
-        <section className='w-full space-y-5 md:space-y-0 lg:h-[45rem] md:h-[21rem] h-[12rem] flex flex-col m-auto bg-cover' style={{ backgroundImage: "url(./img/bg2.jpg)" }}>
+        <section className='w-full space-y-5 md:space-y-0 lg:h-[45rem] md:h-[21rem] h-[14rem] flex flex-col   m-auto bg-cover' style={{ backgroundImage: `url(${bg2})`}}>
           <div className='bg-[#001434] w-[70vw] lg:w-[70vw] lg:h-[15rem] md:w-[70vw] md:h-[8rem] h-[4rem] lg:mt-[13%] md:mt-[12%] mt-[20%]'>
             <div className='w-full h-full  xl:px-18 xl:py-16 md:px-5 md:py-6 px-8 py-4 bg-[#4E6185]/70 '>
               <h3 className='lg:text-5xl md:text-3xl text-xs font-bold text-center text-white'>"To empower businesses with cutting-edge digital solutions."</h3>
             </div>
           </div>
-
           <button className='text-white md:text-2xl text-xs bg-[#880E4F] md:p-3 p-1.5 md:w-[20rem] lg:mt-36 md:mt-10 justify-center items-center m-auto rounded-xl'>Explore our solution</button>
         </section>
 
@@ -51,11 +54,11 @@ const AboutUs = () => {
 
           <div className='md:w-[44rem] flex flex-col m-auto justify-center items-center'>
             <div className='md:h-[36.8rem] h-[22rem] md:w-[31.5rem] w-[17rem] bg-[linear-gradient(180deg,rgba(18,23,31,1)_78%,rgba(45,54,70,1)_100%)] rounded-4xl flex flex-col justify-center items-center transition-transform duration-500 transform hover:rotate-10'>
-              <img src="./img/profile.png" alt="" className='md:w-[27.4rem] md:h-[23rem] h-[10rem] border-amber-100' />
+              <img src={profile} alt="" className='md:w-[27.4rem] md:h-[23rem] h-[10rem] border-amber-100' />
               <span className='md:text-4xl text-2xl text-white mt-5'>Abhishek Kumar</span>
               <span className='md:text-xl text-sm text-white mt-3'>Founder & CEO</span>
               <span className='md:text-3xl text-xl text-white mt-3'>Vaishalitech</span>
-              <img src="./img/linkedin.png" alt="linkedin logo" className='h-7 mt-3' />
+              <img src={linkedin} alt="linkedin logo" className='h-7 mt-3' />
             </div>
 
             <span className='md:text-4xl text-2xl text-white font-extralight text-center mt-10'>A Message from Our CEO</span>
