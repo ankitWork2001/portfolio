@@ -8,6 +8,7 @@ import image5 from '../assets/portfolio_imgs/5.jpg'
 import image6 from '../assets/portfolio_imgs/6.jpg'
 import image7 from '../assets/portfolio_imgs/7.jpg'
 import image8 from '../assets/portfolio_imgs/8.jpg'
+import bg from '../assets/portfolio_imgs/bg1.jpg'
 
 const projects = [
   {
@@ -59,18 +60,24 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen mt-15 w-full overflow-y-auto bg-[#0c1630] px-4 py-10">
+    <div>
+
+      <section className='w-full lg:h-[25rem] md:h-[10rem] h-[6rem] flex justify-center items-center mt-13 md:mt-10 lg:mt-0 bg-center bg-cover' style={{ backgroundImage: `url(${bg})` }}>
+          <span className='md:text-6xl text-2xl font-semibold text-center text-white'>Portfolio</span>
+        </section>
+    <section>
+    <div className="min-h-screen md:mt-5 w-full overflow-y-auto bg-[#0c1630] px-4 py-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <div
-            key={index}
-            className="bg-[#111b35] hover:-scale-[1.1] transition duration-400 flex flex-col gap-3 rounded-xl overflow-hidden shadow-md border border-gray-700 text-white"
+          key={index}
+          className="bg-[#111b35] hover:-scale-[1.1] transition duration-400 flex flex-col gap-3 rounded-xl overflow-hidden shadow-md border border-gray-700 text-white"
           >
             {project.image ? (
               <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-56 object-cover rounded-2xl"
+              src={project.image}
+              alt={project.title}
+              className="w-full h-56 object-cover rounded-2xl"
               />
             ) : (
               <div className="w-full h-40 bg-purple-900 flex items-center justify-center">
@@ -103,6 +110,8 @@ const Portfolio = () => {
           Contact us now
         </Link>
       </div>
+    </div>
+    </section>
     </div>
   );
 };
