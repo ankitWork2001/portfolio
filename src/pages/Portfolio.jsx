@@ -55,6 +55,7 @@ const projects = [
   },
 ];
 
+
 const Portfolio = () => {
   return (
     <div className="min-h-screen mt-15 w-full overflow-y-auto bg-[#0c1630] px-4 py-10">
